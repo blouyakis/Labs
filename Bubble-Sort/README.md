@@ -81,7 +81,10 @@ To write the bubble sort, the first you need to do is write a 'swap' function.  
 ```c
 void swap(int *a, int *b)
 {
-    // TODO: Swap two integers in an array.
+    void swap(int *a, int *b)
+    temp = *a
+    *a = *b
+    *b = temp
 }
 ```
 
@@ -93,16 +96,15 @@ Go ahead and work on this as a group.
 While bubble sort is well documented you should try writing it, talking it through with your partners. A bubble sort will be two nested for loops. One that goes through the entire array, and one that is performing the swaps on each number. The print should be setup in the 'outer-loop' so you can see what the array looks like after each pass. Don't forget to put `if(print)` before your print, or your code may slow down considerably when you are testing large arrays. 
 
 
-
 ## Deeper Understanding
 As you write the bubble sort, make sure to comment on each line what it is doing and why. Bubble sore is well documented, so it is more important that you understand the why than coming up with a creative solution. 
 
 1. Bubble sort is $O(n^2)$. Looking at the algorithm can you explain to your group why that is?
 2. Can you come up with an array that will generate the "worst case"? 
-3. Can you come up with an array that will generate the "best case"?
+3. Can you come up with an array that will generate the "best case"? 
    * By default, the best case is the same, but can you optimize it?
    * Given the example above, optimize it so it stops running after the array is sorted? 
-     * The optimized version is more common, and gives us the "best case".
+    * The optimized version is more common, and gives us the "best case".
 
 
 ## Compare Sorts
@@ -122,7 +124,7 @@ We suggest you run it *without* print, as print will slow down the code. So for 
 ```text
 > ./tester.out 0 10000
 > ./tester.out 1 10000
-```
+
 
 You will notice on larger numbers, the bubble starts to really slow down, while the qsort (quick sort) doesn't.  Have one member store the runs of the output into a spreadsheet, and then graph the results between the two sorts. 
 
@@ -135,11 +137,59 @@ Work each one out on paper - similar to how you did for the 5 value array above 
 > Stretch goal: you can include an operations counter. We recommend setting the counter
 > to a flag, so you can enable the counter showing or not. This may help you 
 > see the $O(n^2)$ curve easier. 
-
+./
 
 ## Technical Interview Practice
 
 Lastly, work on leet code practice. Everyone pick a different problem, and take turns explaining your solution *as* you work through the code (as time allows). This is called "live coding" and often required in technical interviews. Moving forward, we would like you to emphasize the explaining of code as you work through it, to better prepare you for technical interviews. You should also discuss one of the technical interview questions as a group. 
+
+```
+#include <stdlib.h>
+
+  void sortHeap(int *x, int y, int i) {
+    for (;;) {
+      int big = i;
+      int left = 2 * i + 1;
+      int right = 2 * i + 2;
+      if (left < y && x[left] > x[big]) {
+        big = left;
+        }
+      if (right < y && x[right] > x[big]) {
+        big = right;
+      }
+      if (big == i) {
+        break;
+      }
+      int z = x[i]; x[i] = x[big]; x[big] = z;
+      i = big;
+    }
+  }
+
+  int* sortArray(int* nums, int numsSize, int* returnSize) {
+    if (!nums || numsSize <= 0) {
+      *returnSize = 0;
+      return NULL;
+    }
+    int *arr = (int *)malloc(sizeof(int) * numsSize);
+    if (!arr) {
+      *returnSize = 0;
+      return NULL;
+    }
+    for (int i = 0; i < numsSize; i++) {
+      arr[i] = nums[i];
+    }
+    for (int i = numsSize / 2 - 1; i >= 0; i--) {
+      sortHeap(arr, numsSize, i);
+      for (int end = numsSize - 1; end > 0; end--) {
+        int x = arr[0]; arr[0] = arr[end]; 
+        arr[end] = x;
+        sortHeap(arr, end, 0);
+      }
+      *returnSize = numsSize;
+      return arr;
+    }
+  }
+```
 
 
 ## 📚 Resources
