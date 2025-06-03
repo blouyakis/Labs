@@ -150,8 +150,11 @@ return count; // returns an integer of the number of 1 bits counted at the end o
 ## 📚 Resources
 * [Merge Sort on Khan](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/divide-and-conquer-algorithms)
 * [Merge Sort Video](https://www.youtube.com/watch?time_continue=1&v=JSceec-wEyw)
-* [Merge Sort]: mergesort.svg
-* [divide and conquer algorithm]: https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm
-* [John von Neumann]: https://en.wikipedia.org/wiki/John_von_Neumann
-* [in-place algorithm]: https://en.wikipedia.org/wiki/In-place_algorithm
-* [modern computer architecture]: https://en.wikipedia.org/wiki/Von_Neumann_architecture
+
+
+
+[Merge Sort]: mergesort.svg
+[divide and conquer algorithm]: https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm
+[John von Neumann]: https://en.wikipedia.org/wiki/John_von_Neumann
+[in-place algorithm]: https://en.wikipedia.org/wiki/In-place_algorithm
+[modern computer architecture]: https://en.wikipedia.org/wiki/Von_Neumann_architecture
