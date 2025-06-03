@@ -46,7 +46,8 @@ mergeSort(arr[], temp[], l,  r):
 ### Discussion
 
 1. Given the pseudo code: is merge sort an [in-place algorithm]? Why or why not?
-Merge Sort is not an 'in-place' algorithm. In merge sort, we create a variable to store the temporary value as the memory allocation changes. We need to have a temporary value so we can modify the entire array. Once we finish modifying the array, we no longer need the temporary variable. 
+
+Merge Sort is not an 'in-place' algorithm. In merge sort, we create a variable to store the temporary array as the memory allocation changes. We need to have a temporary array so we can modify the entire array. Once we finish modifying the array, we no longer need the temporary array. 
 
 
 ## MergeSort
@@ -127,13 +128,14 @@ Work together with your partners to build the merge function. While the code is 
 ## Other Sorts?
 Take time to search additional sorts online (there are a *ton* of them). Each person should find a sort, and describe to the group what situations it is best used for. Even better if you can find a visualization for that sort. 
 
+Quick sort divides the array and sub-divides each list into sublists. It uses a partition to track copies while swapping values with indices. The space/time ranges from O(N*log N) to worst case O(N^2). Quicksort is an in-place sort. This is useful for arrays and smaller data sets with a defined amount of space. 
 
 ## Technical Interview Practice
 
 Lastly, work on leet code practice. Everyone pick a different problem, and take turns explaining your solution *as* you work through the code (as time allows). This is called "live coding" and often required in technical interviews. Moving forward, we would like you to emphasize the explaining of code as you work through it, to better prepare you for technical interviews. You should also discuss one of the technical interview questions as a group. 
 
-```
 LeetCode 191. Number os 1 Bits:
+```
 // Function removes the rightmost bit of an integer if it is 1 and counts the number of 1 bits, returning the count at the end of the loop. If it is a 1 the loop processes and if it is zero the loop does not process, making it a fast algorithm. 
 int hammingWeight(int n) { // function takes an integer n & returns the number of 1 bits 
 int count = 0; // initialize a variable to count the number of 1 bits & store that value, starts at zero
