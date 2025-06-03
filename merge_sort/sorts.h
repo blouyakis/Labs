@@ -152,6 +152,9 @@ void merge(int arr[], int temp[], int l, int m, int r)
     while(j <= r) {
         temp[start++] = arr[j++];
     }
+    for (int k = l; k <= r; k++) {
+        arr[k] = temp[k];
+    }
 }
 
 // To be built during week 6 lab
@@ -165,7 +168,7 @@ void merge(int arr[], int temp[], int l, int m, int r)
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
 void merge_sort(int arr[], int temp[], int l, int r)
 {
-    if(l < r) { // if left is less than right
+    if (l < r) { // if left is less than right
         int m = l + ((r-l)/2); // split the list in half
         merge_sort(arr, temp, l, m); // sort the left side
         merge_sort(arr, temp, m+1, r); // sort the right side
@@ -185,6 +188,9 @@ void mergeSortIntegers(int *array, unsigned int size, int print)
         return;
 
     int *temp = (int *)malloc(sizeof(int) * size);
+    for(int i = 0; i < size; i++) {
+        temp[i] = array[i];
+    }
     merge_sort(array, temp, 0, size - 1);
     free(temp);
 }

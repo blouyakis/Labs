@@ -46,6 +46,7 @@ mergeSort(arr[], temp[], l,  r):
 ### Discussion
 
 1. Given the pseudo code: is merge sort an [in-place algorithm]? Why or why not?
+Merge Sort is not an 'in-place' algorithm. In merge sort, we create a variable to store the temporary value as the memory allocation changes. We need to have a temporary value so we can modify the entire array. Once we finish modifying the array, we no longer need the temporary variable. 
 
 
 ## MergeSort
