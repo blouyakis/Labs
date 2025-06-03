@@ -20,6 +20,7 @@ When working in teams, remember do not let one person do all the work. Make sure
 ## Merge sort works as follows:
 
 1. Repeatedly divide the unsorted array into n subarrays (a subarray being 'a smaller part' of the original array) until each subarray contains one element (Note: an array of one element is already sorted).
+
 2. Then, repeatedly merge subarrays to produce new sorted subarrays until there is only one subarray remaining. The result will be the sorted array.
 
 
