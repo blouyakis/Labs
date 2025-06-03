@@ -130,6 +130,19 @@ Take time to search additional sorts online (there are a *ton* of them). Each pe
 
 Lastly, work on leet code practice. Everyone pick a different problem, and take turns explaining your solution *as* you work through the code (as time allows). This is called "live coding" and often required in technical interviews. Moving forward, we would like you to emphasize the explaining of code as you work through it, to better prepare you for technical interviews. You should also discuss one of the technical interview questions as a group. 
 
+```
+LeetCode 191. Number os 1 Bits:
+// Function removes the rightmost bit of an integer if it is 1 and counts the number of 1 bits, returning the count at the end of the loop. If it is a 1 the loop processes and if it is zero the loop does not process, making it a fast algorithm. 
+int hammingWeight(int n) { // function takes an integer n & returns the number of 1 bits 
+int count = 0; // initialize a variable to count the number of 1 bits & store that value, starts at zero
+while (n) { // while loop iterates until n is zero and all bits are counted
+n = n & (n-1); // flips all bits starting at the rightmost bit and iterating through all of the bits, removing 1 bit each iteration
+count++; // increment the count by 1 after each iteration
+}
+return count; // returns an integer of the number of 1 bits counted at the end of the loop
+}
+```
+
 ## 📚 Resources
 * [Merge Sort on Khan](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/divide-and-conquer-algorithms)
 * [Merge Sort Video](https://www.youtube.com/watch?time_continue=1&v=JSceec-wEyw)
