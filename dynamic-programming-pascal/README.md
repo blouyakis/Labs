@@ -28,6 +28,18 @@ When working in teams, remember do not let one person do all the work. Make sure
 
 As a team, **find three to four algorithms** that use dynamic programming. You do not need to implement them, or even fully understand them, but you should work together to understand how dynamic programming is being used to help with the algorithm. 
 
+>Dijkstra's Algorithm finds shortest path in a graph with non-negative edge weights
+
+>Knapsack Problem determines most valuable items to put in a knapsack of size n given weight and size constraints
+
+>Traveling Salesman finds the shortest route to visit a set of cities returning to the starting city 
+
+>Fibonacci sequence calculates Fibonacci numbers by storing and reusing already computed values
+
+>Word Break Problem determines if a string can be segmented into valid words based on a given list of words
+
+>Stock Buy and Sell Problems optimize profits when buying and selling stocks over time
+
 Now that you are thinking about what is dynamic programming, it is time to work together on a sample problem.
 
 

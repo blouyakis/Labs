@@ -134,7 +134,7 @@ Quick sort divides the array and sub-divides each list into sublists. It uses a 
 
 Lastly, work on leet code practice. Everyone pick a different problem, and take turns explaining your solution *as* you work through the code (as time allows). This is called "live coding" and often required in technical interviews. Moving forward, we would like you to emphasize the explaining of code as you work through it, to better prepare you for technical interviews. You should also discuss one of the technical interview questions as a group. 
 
-LeetCode 191. Number os 1 Bits:
+LeetCode 191. Number of 1 Bits:
 ```
 // Function removes the rightmost bit of an integer if it is 1 and counts the number of 1 bits, returning the count at the end of the loop. If it is a 1 the loop processes and if it is zero the loop does not process, making it a fast algorithm. 
 int hammingWeight(int n) { // function takes an integer n & returns the number of 1 bits 

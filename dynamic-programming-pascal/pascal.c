@@ -24,8 +24,16 @@ void printSingleRow(ull *row, int size)
 
 ull pascaldp(int n, int i, ull *ops)
 {
-    // student todo
-    return NULL; // remove
+    if (n == i || i == 0) { // base case of Pascals Triangle
+        table[n][i] = 1; // initialize value in table
+        return 1;
+    }
+    if (table[n][i] != 0) { // check if already computed & return cache value if it is
+        return table[n][i];
+    }
+    (*ops)++; // if not calculated, increment 
+    table[n][i] = pascaldp(n - 1, i, ops) + pascaldp(n - 1, i - 1, ops); // use recursion to calculate the value using Pascals Triangle
+    return table[n][i]; // return the new calculation
 }
 
 ull* pascaldp_full(int n, ull *ops)
